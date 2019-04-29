@@ -11,10 +11,7 @@ import kotlinx.android.synthetic.main.list_element_pokemon.view.*
 
 class PokemonSimpleListAdapter (var items: List<Pokemon>, val clickListener: (Pokemon) -> Unit):RecyclerView.Adapter<PokemonSimpleListAdapter.ViewHolder>(),
     MyPokemonAdapter {
-    override fun changeDataSet(newDataSet: List<Pokemon>) {
-        this.items = newDataSet
-        notifyDataSetChanged()
-    }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_element_pokemon, parent, false)
@@ -25,8 +22,10 @@ class PokemonSimpleListAdapter (var items: List<Pokemon>, val clickListener: (Po
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(items[position], clickListener)
 
-    fun changeList(items: List<Pokemon>) {
-        this.items = items
+
+
+    override fun changeDataSet(newDataSet: List<Pokemon>) {
+        this.items = newDataSet
         notifyDataSetChanged()
     }
 
