@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Laboratorio5_Tarea</string>
+    <string name="app_name">PokeL5</string>
+    <string name="n_a_value">N/A</string>
 </resources>
